@@ -34,6 +34,8 @@ static const HklFactory *getFactory(struct Geometry geometry)
         match(geometry){
                 of(E4ch) res = hkl_factory_get_by_name("E4CH", NULL);
                 of(E4cv) res = hkl_factory_get_by_name("E4CV", NULL);
+                of(E4cvg)  res = hkl_factory_get_by_name("E4CVG", NULL);
+                of(E4cvg2) res = hkl_factory_get_by_name("E6CVG2", NULL);
                 of(E6c)  res = hkl_factory_get_by_name("E6C", NULL);
                 of(K4ch) res = hkl_factory_get_by_name("K4CH", NULL);
                 of(K4cv) res = hkl_factory_get_by_name("K4CV", NULL);
@@ -73,6 +75,8 @@ HklGeometry *newGeometry(struct Geometry geometry)
         match(geometry){
                 of(E4ch, w, values){ NEW_GEOMETRY(*w, values); }
                 of(E4cv, w, values){ NEW_GEOMETRY(*w, values); }
+                of(E4cvg, w, values){ NEW_GEOMETRY(*w, values); }
+                of(E4cvg2, w, values){ NEW_GEOMETRY(*w, values); }
                 of(E6c, w, values){ NEW_GEOMETRY(*w, values); }
                 of(K4ch, w, values){ NEW_GEOMETRY(*w, values); }
                 of(K4cv, w, values){ NEW_GEOMETRY(*w, values); }

@@ -26,7 +26,10 @@ all_tests = \
 	hkl-pseudoaxis-soleil-nanoscopium-robot-t \
 	hkl-pseudoaxis-soleil-sirius-kappa-t \
 	hkl-pseudoaxis-soleil-sixs-med-t \
-	hkl-pseudoaxis-zaxis-t
+	hkl-pseudoaxis-zaxis-t \
+    hkl-e4cgv-test-t \
+    hkl-e4cgv2-test-t
+
 
 AM_CPPFLAGS = -Wextra -D_DEFAULT_SOURCE \
 	-I$(top_srcdir) \

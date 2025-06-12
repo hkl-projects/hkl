@@ -10,7 +10,7 @@ E4CVG and E4CVG2 are simplified forms of E4CV with an added gamma axis. For gamm
 static void register_and_setup(void)
 {
     int res = TRUE;
-    Geometry gconf = E4CVG(1.54, VALUES(30., 0., 90., 60., 0.));
+    Geometry gconf = E4cvg(1.54, VALUES(30., 0., 90., 60., 0.));
     HklGeometry *geometry = newGeometry(gconf);
     HklDetector *detector = hkl_detector_factory_new(HKL_DETECTOR_TYPE_0D);
     HklSample *sample = newSample(CU);

@@ -27,8 +27,8 @@ all_tests = \
 	hkl-pseudoaxis-soleil-sirius-kappa-t \
 	hkl-pseudoaxis-soleil-sixs-med-t \
 	hkl-pseudoaxis-zaxis-t \
-    hkl-e4cgv-test-t \
-    hkl-e4cgv2-test-t
+    hkl-e4cvg-t \
+    hkl-e4cvg2-t
 
 
 AM_CPPFLAGS = -Wextra -D_DEFAULT_SOURCE \

@@ -45,7 +45,7 @@ static HklMode *bissector(void)
                  TRUE);
 }
 
-static HklEngine *hkl_engine_e4cgv2_hkl_new(HklEngineList *engines)
+static HklEngine *hkl_engine_e4cvg2_hkl_new(HklEngineList *engines)
 {
 	HklEngine *self;
 	HklMode *default_mode;
@@ -63,12 +63,12 @@ static HklEngine *hkl_engine_e4cgv2_hkl_new(HklEngineList *engines)
 /* mode readonly */
 /*****************/
 
-REGISTER_READONLY_INCIDENCE(hkl_engine_e4cgv2_incidence_new,
-			    P99_PROTECT({BASEPITCH, THETAH, ALPHAY, ALPHAX}),
-			    surface_parameters_z);
+REGISTER_READONLY_INCIDENCE(hkl_engine_e4cvg2_incidence_new,
+			    P99_PROTECT({OMEGA, CHI, PHI}),
+			    surface_parameters_y);
 
-REGISTER_READONLY_EMERGENCE(hkl_engine_soleil_sirius_turret_emergence_new,
-			    P99_PROTECT({BASEPITCH, THETAH, ALPHAY, ALPHAX, DELTA, GAMMA}),
+REGISTER_READONLY_EMERGENCE(hkl_engine_e4cvg2_emergence_new,
+			    P99_PROTECT({OMEGA, CHI, PHI, TTH, GAMMA}),
 			    surface_parameters_z);
 
 /************************/

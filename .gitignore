@@ -42,3 +42,5 @@ ghkl3d
 /test/tap/libtap.a
 /Documentation/hkl.html
 *_flymake.h
+*.dirstamp
+Documentation/hkl.org

@@ -34,9 +34,9 @@
 	"\n"								\
 	"  + **" GAMMA "** : rotation around the :math:`\\vec{z}` direction (0, 0, 1)\n"
 
-static const char* hkl_geometry_eulerian4CGV_axes[] = {OMEGA, CHI, PHI, TTH, GAMMA};
+static const char* hkl_geometry_eulerian4CVG_axes[] = {OMEGA, CHI, PHI, TTH, GAMMA};
 
-static HklGeometry *hkl_geometry_new_eulerian4CGV(const HklFactory *factory)
+static HklGeometry *hkl_geometry_new_eulerian4CVG(const HklFactory *factory)
 {
 	HklGeometry *self = hkl_geometry_new(factory, &hkl_geometry_operations_defaults);
 	HklHolder *h;
@@ -53,15 +53,15 @@ static HklGeometry *hkl_geometry_new_eulerian4CGV(const HklFactory *factory)
 	return self;
 }
 
-static HklEngineList *hkl_engine_list_new_eulerian4CGV(const HklFactory *factory)
+static HklEngineList *hkl_engine_list_new_eulerian4CVG(const HklFactory *factory)
 {
 	HklEngineList *self = hkl_engine_list_new();
 
-	hkl_engine_e4cgv_hkl_new(self);
-	hkl_engine_e4cgv_psi_new(self);
+	hkl_engine_e4cvg_hkl_new(self);
+	hkl_engine_e4cvg_psi_new(self);
 	hkl_engine_q_new(self);
-	hkl_engine_e4cgv_incidence_new(self);
-	hkl_engine_e4cgv_emergence_new(self);
+	hkl_engine_e4cvg_incidence_new(self);
+	hkl_engine_e4cvg_emergence_new(self);
 
 	return self;
 }
@@ -178,7 +178,7 @@ static HklMode *psi_constant(void)
 }
 
 /*static HklEngine *hkl_engine_e4c_hkl_new(HklEngineList *engines)*/
-static HklEngine *hkl_engine_e4cgv_hkl_new(HklEngineList *engines)
+static HklEngine *hkl_engine_e4cvg_hkl_new(HklEngineList *engines)
 {
 	HklEngine *self;
 	HklMode *default_mode;
@@ -215,7 +215,7 @@ static HklMode *psi(void)
 }
 
 /*static HklEngine *hkl_engine_e4c_psi_new(HklEngineList *engines)*/
-static HklEngine *hkl_engine_e4cgv_psi_new(HklEngineList *engines)
+static HklEngine *hkl_engine_e4cvg_psi_new(HklEngineList *engines)
 {
 	HklEngine *self;
 	HklMode *default_mode;
@@ -233,15 +233,15 @@ static HklEngine *hkl_engine_e4cgv_psi_new(HklEngineList *engines)
 /* mode readonly */
 /*****************/
 
-REGISTER_READONLY_INCIDENCE(hkl_engine_e4cgv_incidence_new,
+REGISTER_READONLY_INCIDENCE(hkl_engine_e4cvg_incidence_new,
 			    P99_PROTECT({OMEGA, CHI, PHI}),
 			    surface_parameters_y);
 
-REGISTER_READONLY_EMERGENCE(hkl_engine_e4cgv_emergence_new,
-			    P99_PROTECT({OMEGA, CHI, PHI, TTH}),
+REGISTER_READONLY_EMERGENCE(hkl_engine_e4cvg_emergence_new,
+			    P99_PROTECT({OMEGA, CHI, PHI, TTH, GAMMA}),
 			    surface_parameters_y);
 
 
 
 
-REGISTER_DIFFRACTOMETER(eulerian4CGV, "E4CVG", HKL_GEOMETRY_EULERIAN4CGV_DESCRIPTION);
+REGISTER_DIFFRACTOMETER(eulerian4CVG, "E4CVG", HKL_GEOMETRY_EULERIAN4CVG_DESCRIPTION);

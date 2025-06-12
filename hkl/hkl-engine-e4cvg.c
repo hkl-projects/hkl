@@ -20,7 +20,7 @@
 /* Geometry */
 /************/
 
-#define HKL_GEOMETRY_EULERIAN4CGV_DESCRIPTION				\
+#define HKL_GEOMETRY_EULERIAN4CVG_DESCRIPTION				\
 	"+ xrays source fix allong the :math:`\\vec{x}` direction (1, 0, 0)\n" \
 	"+ 4 axes for the sample\n"					\
 	"\n"								\
